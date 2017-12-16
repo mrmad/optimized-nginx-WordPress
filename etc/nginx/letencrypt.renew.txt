@@ -1,37 +1,8 @@
-Do you want to expand and replace this existing certificate with the new
-certificate?
--------------------------------------------------------------------------------
-(E)xpand/(C)ancel: E
-Renewing an existing certificate
-Performing the following challenges:
-http-01 challenge for morethanandroid.de
-http-01 challenge for mrmad.net
-http-01 challenge for www.mrmad.net
-http-01 challenge for morethanandroid.com
-http-01 challenge for www.morethanandroid.com
-http-01 challenge for www.morethanandroid.de
-http-01 challenge for cdn.morethanandroid.de
-Using the webroot path /var/www/morethanandroid.de/htdocs for all unmatched domains.
-Waiting for verification...
-Cleaning up challenges
-
-IMPORTANT NOTES:
- - Congratulations! Your certificate and chain have been saved at:
-   /etc/letsencrypt/live/morethanandroid.de/fullchain.pem
-   Your key file has been saved at:
-   /etc/letsencrypt/live/morethanandroid.de/privkey.pem
-   Your cert will expire on 2018-03-15. To obtain a new or tweaked
-   version of this certificate in the future, simply run
-   letsencrypt-auto again. To non-interactively renew *all* of your
-   certificates, run "letsencrypt-auto renew"
- - If you like Certbot, please consider supporting our work by:
-
-   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
-   Donating to EFF:                    https://eff.org/donate-le
+cd to:
 
 root@v81553:/opt/letsencrypt# 
 
 
 
 
-./letsencrypt-auto certonly --webroot -w /var/www/morethanandroid.de/htdocs/ -d morethanandroid.de -d mrmad.net -d www.mrmad.net -d morethanandroid.com -d www.morethanandroid.com -d www.morethanandroid.de -d cdn.morethanandroid.de --email gerardo.madeo@googlemail.com --text --agree-tos
+./letsencrypt-auto certonly --webroot -w /var/www/yourdomain.tld/htdocs/ -d yourdomain.tld -d yourdomain2.tld -d www.yourdomain2.tld -d yourdomain3.tld -d www.yourdomain3 -d  --email yourname@somedomain.tld --text --agree-tos
