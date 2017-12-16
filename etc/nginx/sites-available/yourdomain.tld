@@ -1,0 +1,28 @@
+server {
+
+
+    server_name yourdomain.tld   www.yourdomain.tld;
+
+
+    access_log /var/log/nginx/yourdomain.tld.access.log rt_cache_redis;
+    error_log /var/log/nginx/yourdomain.tld.error.log;
+
+
+    root /var/www/yourdomain.tld/htdocs;
+    
+    
+
+    index index.php index.html index.htm;
+
+
+    include  common/redis-php7.conf; 
+    
+    include common/wpcommon-php7.conf;
+    include common/locations-php7.conf;
+    include common/pagespeed.conf;
+    ## remove comment if you use wp powered cache plugin
+   # include common/poweredcache.conf;
+    include common/hotlink.conf;
+    include common/snippets.conf;
+    include /var/www/yourdomain.tld/conf/nginx/*.conf;
+}
