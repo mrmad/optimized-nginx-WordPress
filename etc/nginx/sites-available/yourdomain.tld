@@ -21,7 +21,7 @@ server {
     include common/locations-php7.conf;
     include common/pagespeed.conf;
     ## remove comment if you use wp powered cache plugin
-   # include common/poweredcache.conf;
+    include common/poweredcache.conf;
     include common/hotlink.conf;
     include common/snippets.conf;
     include /var/www/yourdomain.tld/conf/nginx/*.conf;
